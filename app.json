@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Karuta",
+    "slug": "Karuta",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.andinox.Karuta"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4e39d278-ae6e-4310-ad3b-8be68523c6e8"
+      }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {"android": {
+          "usesCleartextTraffic": true
+        }
+        }
+      ]
+    ]
+  }
+}
