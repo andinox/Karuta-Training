@@ -4,7 +4,7 @@ import Karuta from "./karuta/karuta";
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
 import Training from "./karuta/components/Training/Training";
-<Karuta/>
+
 const Stack = createStackNavigator();
 
 export default function App() {

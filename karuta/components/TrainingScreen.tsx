@@ -1,26 +1,18 @@
-import {Component, useEffect, useState} from "react";
-import {Text, View, StyleSheet, Animated} from "react-native";
+import {useEffect, useState} from "react";
 import React from "react";
-import Deck from "./Training/Deck";
-import ScrollView = Animated.ScrollView;
+import TrainingDeck from "./Training/TrainingDeck";
+import services from "../services/Services";
+import DeckScrollView from "./Decks/DeckScrollView";
 
 const TrainingScreen = () => {
     const [get, setGet] = useState<string[]>([]);
 
     useEffect(() => {
-        fetch("http://157.159.195.108:8000/deck_names")
-            .then(response => response.text())
-            .then(data => {
-                setGet(data.split("\n").slice(0, -1));
-            });
+        services.getDeckNames().then(setGet)
     }, []);
 
     return (
-        <ScrollView>
-            {get && get.map((deckName: string, index: React.Key | null | undefined) => (
-                <Deck key={index} name={deckName} />
-            ))}
-        </ScrollView>
+        <DeckScrollView deck={TrainingDeck}/>
     );
 };
 export default TrainingScreen;

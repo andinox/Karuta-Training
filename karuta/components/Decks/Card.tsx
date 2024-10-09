@@ -12,7 +12,6 @@ class Card extends Component<{name:string,op:string,visual:string,audio:string}>
                 alignItems: "center",
                 margin: 10,
                 maxWidth: 150,
-                backgroundColor: "#fff",
                 elevation: 5,
                 flexGrow: 0,
                 flexBasis: "49%",
